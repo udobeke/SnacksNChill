@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import axios from 'axios';
 import MovieSearch from './MovieSearch';
+import Sidebar from './SideBar';
 
 const API_KEY = '2379ba0eff6a55ce45794c90a648db8b';
 
@@ -20,7 +21,10 @@ function MovieList() {
   }, []);
 
   return (
+    <>
+    <Sidebar/>
     <div>
+      
       <div>
         <MovieSearch/>
       </div>
@@ -30,7 +34,8 @@ function MovieList() {
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
-    </div>
+      </div>
+      </>
   );
 }
 
