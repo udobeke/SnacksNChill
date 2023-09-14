@@ -13,8 +13,8 @@ function App() {
       </div>
       <div className="main-content">
       <Routes>
-          <Route path="/sidebar" element={<Sidebar />} />
-          <Route path="/movielist" element={<MovieList />} />
+          
+          <Route path="/" element={<MovieList />} />
         <Route path="/movies/:id" element={<MovieDetails />} />
         
         </Routes>
