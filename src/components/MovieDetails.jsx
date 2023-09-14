@@ -26,6 +26,10 @@ function MovieDetails() {
   return (
     <div>
       <h1>{movie.title}</h1>
+      <img
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} // Use the poster_path property for the image URL
+        alt={movie.title}
+      />
       <p>{movie.release_date}</p>
       <p>{movie.runtime} minutes</p>
       <p>{movie.overview}</p>
