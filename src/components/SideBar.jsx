@@ -1,92 +1,50 @@
-import './Sidebar.css'
+import './SideBar.css'
+import * as Unicons from '@iconscout/react-unicons';
+import { Link } from 'react-router-dom';
 
-
-
-
-export default function Sidebar() {
+function Sidebar() {
   return (
-    <>
-      <nav
-        className="navbar navbar-expand-lg navbar-light"
-        style={{ backgroundColor: "turquoise" }}
-      >
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-                <div className="dropdown-divider" />
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </div>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabIndex={-1}
-                aria-disabled="true"
-              >
-                Disabled
-              </a>
-            </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-light my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
+    <div className="sidebar">
+      <h2>SnacksNChill</h2>
 
-    </>
+      <div className='menu'>
+        <ul>
+          <li>
+          <Link to="/Home" className="active">
+            <Unicons.UilEstate className='icon' />
+            <span className="links_name">Dashboard</span>
+          </Link>
+          </li>
+          <li>
+            <Link to="/Home">
+              <Unicons.UilFilm className='icon' />
+              <span className="links_name">Movie</span>
+            </Link>
+          </li>
+          <li>
+          <Link to="/Home" >
+            <Unicons.UilTvRetro className='icon' />
+            <span className="links_name">TV series</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Home" >
+              <Unicons.UilPlus className='icon' />
+              <span className="links_name">Upcoming</span>
+            </Link>
+          </li>
 
-  )
+          <li className="log_out">
+            <Link to="/Login">
+              <Unicons.UilSignout className='icon' />
+              <span className="links_name">Log out</span>
+            </Link>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  );
 }
+
+export default Sidebar;
