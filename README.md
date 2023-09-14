@@ -1,6 +1,3 @@
-
----
-
 # SnacksNChill - Movie Discovery Web Application
 
 ![SnacksNChill Logo](/path/to/your/logo.png)
@@ -109,5 +106,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Thanks to [The Movie Database (TMDb)](https://www.themoviedb.org/) for providing movie data.
 - Special thanks to our contributors and users for their support!
-
----
