@@ -12,7 +12,7 @@ function Sidebar() {
       <div className='menu'>
         <ul>
           <li>
-          <Link to="/MovieList" className="active">
+          <Link to="/" className="active">
             <Unicons.UilEstate className='icon' />
             <span className="links_name">Home</span>
           </Link>
