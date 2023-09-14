@@ -12,11 +12,9 @@ function App() {
         <Sidebar />
       </div>
       <div className="main-content">
-      <Routes>
-          
+        <Routes>
           <Route path="/" element={<MovieList />} />
-        <Route path="/movies/:id" element={<MovieDetails />} />
-        
+          <Route path="/movies/:id" element={<MovieDetails />} />
         </Routes>
       </div>
     </Router>
