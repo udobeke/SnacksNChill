@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Sidebar from './SideBar';
 import axios from 'axios';
 
 const API_KEY = '2379ba0eff6a55ce45794c90a648db8b';
@@ -24,16 +25,19 @@ function MovieDetails() {
   }
 
   return (
+    <>
+    <Sidebar />
     <div>
       <h1>{movie.title}</h1>
       <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} // Use the poster_path property for the image URL
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
         alt={movie.title}
       />
       <p>{movie.release_date}</p>
       <p>{movie.runtime} minutes</p>
       <p>{movie.overview}</p>
-    </div>
+      </div>
+    </>
   );
 }
 
