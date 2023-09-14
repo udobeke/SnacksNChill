@@ -1,26 +1,62 @@
-.navbar,
-.navbar-collapse {
-  flex-direction: column;
+/* Sidebar.css */
+
+/* Sidebar container styles */
+.sidebar {
+  width: 250px;
+  background-color: #5E73F2;
+  color: #fff;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.navbar-expand-lg .navbar-nav {
-  flex-direction: column;
+.sidebar h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.navbar .container-fluid,
-.navbar-expand-lg .navbar-collapse,
-.navbar-expand-lg .navbar-nav {
-  flex-direction: column;
-  align-items: flex-start;
+
+.menu ul {
+  list-style: none;
+  padding: 0;
 }
 
-@media (min-width: 992px) {
-  .navbar {
-    width: 28%;
-    height: 100vh;
-  }
+.menu ul li {
+  margin-bottom: 10px;
+}
 
-  form input {
-    margin-bottom: 0.7em;
-  }
+.menu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #E97264;
+  padding: 10px 20px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+
+.active {
+  background-color: #E97264;
+  padding: 10px 20px;
+}
+
+
+.log_out{
+  position: absolute;
+    bottom: 0;
+    width: 100%;
 }
