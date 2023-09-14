@@ -5,30 +5,32 @@ import { Link } from 'react-router-dom';
 function Sidebar() {
   return (
     <div className="sidebar">
-      <h2>SnacksNChill</h2>
+      <div className="logo-details">
+        <Link to="/" className='mb-3 logo'><h2 className='logo snack'>Snacks<span className='single'>N</span><span className='chill'>Chill</span></h2></Link>
+      </div>
 
       <div className='menu'>
         <ul>
           <li>
-          <Link to="/Home" className="active">
+          <Link to="/MovieList" className="active">
             <Unicons.UilEstate className='icon' />
-            <span className="links_name">Dashboard</span>
+            <span className="links_name">Home</span>
           </Link>
           </li>
           <li>
-            <Link to="/Home">
+            <Link to="/MovieDetails">
               <Unicons.UilFilm className='icon' />
               <span className="links_name">Movie</span>
             </Link>
           </li>
           <li>
-          <Link to="/Home" >
+          <Link to="/MovieList" >
             <Unicons.UilTvRetro className='icon' />
             <span className="links_name">TV series</span>
             </Link>
           </li>
           <li>
-            <Link to="/Home" >
+            <Link to="/MovieList" >
               <Unicons.UilPlus className='icon' />
               <span className="links_name">Upcoming</span>
             </Link>
