@@ -118,3 +118,13 @@ h1 {
   font-size: 16px;
   margin: 10px;
 }
+
+.app-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
