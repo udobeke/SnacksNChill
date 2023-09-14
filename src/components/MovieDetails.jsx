@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Sidebar from './SideBar';
 import axios from 'axios';
+import '../App.css'
 
 const API_KEY = '2379ba0eff6a55ce45794c90a648db8b';
 
