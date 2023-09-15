@@ -1,22 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MovieList from './components/MovieList';
-import MovieDetails from './components/MovieDetails';
-import Sidebar from './components/SideBar';
 import './App.css'
+import Landing from '../LandingPage/Landing';
+import MovieDetails from '../src/components/MovieDetails'
 
 
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Sidebar />
-      </div>
-      <div className="main-content">
         <Routes>
-          <Route path="/" element={<MovieList />} />
-          <Route path="/movies/:id" element={<MovieDetails />} />
+        <Route path="/" element={<Landing />} />
+        
+        <Route path="/movies/:id" element={<MovieDetails/>} />
         </Routes>
-      </div>
     </Router>
   );
 }
