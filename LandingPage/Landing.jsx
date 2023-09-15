@@ -11,7 +11,7 @@ export default function Landing() {
   useEffect(() => {
     // Fetch the top 10 movies from TMDB API when the component mounts
     const apiKey = '2379ba0eff6a55ce45794c90a648db8b';
-    fetch(`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${apiKey}&page=1`)
+    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=1`)
       .then((response) => response.json())
       .then((data) => setMovies(data.results.slice(0, 10)))
       .catch((error) => console.error('Error fetching data:', error));
