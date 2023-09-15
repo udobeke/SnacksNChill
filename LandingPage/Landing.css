@@ -216,6 +216,7 @@ section .cards .card {
 
 .font{
   font-size: 15px;
+  display: flex;
 }
 
 .font1{
