@@ -27,13 +27,20 @@ function MovieDetails() {
         </h2>
       </div>
       <div className="movie-details">
-        <img
-          src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-          alt={movie.title}
-          className="movie-poster"
-        />
+        {movie.video_url ? (
+          <video controls>
+            <source src={movie.video_url} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <img
+            src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+            alt={movie.title}
+            className="movie-poster"
+          />
+        )}
         <div className='font'>
-          <h2  data-testid="movie-title">{movie.title}</h2>
+          <h2 data-testid="movie-title">{movie.title}</h2>
           <p className='font1' data-testid="movie-release-date">Release Date (UTC): {movie.release_date}</p>
           <p data-testid="movie-runtime">Runtime (minutes): {movie.runtime}</p>
           <p data-testid="movie-overview">{movie.overview}</p>
