@@ -96,8 +96,8 @@ export default function Landing() {
         <div>
           <span>© 2023 MovieBox by Peace Chinagwam</span>
           <span className="link">
-            <Link to="/"><Unicons.UilLinkedin />Linkedin</Link>
-            <Link to="/"><Unicons.UilGithub />Github</Link> 
+            <Link className="icon" to="/"><Unicons.UilLinkedin/></Link>
+            <Link className="link" to="/"><Unicons.UilGithub /></Link> 
           </span>
         </div>
       </footer>
