@@ -46,18 +46,18 @@ export default function Landing() {
           <h2 className="logo">
             <Link to="/">SnacksNChill</Link>
           </h2>
-            <div className="search-bar">
-              <input
-                type="text"
-                placeholder="Search for movies by title..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <button onClick={handleSearch}>Search</button>
-            </div>
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search for movies by title..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button onClick={handleSearch}>Search</button>
+          </div>
 
-            {isLoading && <div className="loading-indicator">Loading...</div>}
-          
+          {isLoading && <div className="loading-indicator">Loading...</div>}
+
         </nav>
       </header>
 
@@ -66,7 +66,7 @@ export default function Landing() {
           <div className="text">
             <h1>John Wick 3 : Parabellum</h1>
             <p>
-              John Wick is on the run after killing a member of the international assassins guild, <br /> and with a $14 million price tag on his head, he is the target of hit men and women everywhere 
+              John Wick is on the run after killing a member of the international assassins guild, <br /> and with a $14 million price tag on his head, he is the target of hit men and women everywhere
             </p>
           </div>
           <Link to="/">Watch Trailer</Link>
@@ -85,7 +85,7 @@ export default function Landing() {
                   className="movie-poster"
                 />
                 <h3 className="movie-title">{movie.title}</h3>
-                <p className="movie-release-date">Release Date: {movie.release_date}</p>
+                <p className="movie-release-date">{movie.release_date}</p>
               </Link>
             </li>
           ))}
@@ -96,8 +96,8 @@ export default function Landing() {
         <div>
           <span>© 2023 MovieBox by Peace Chinagwam</span>
           <span className="link">
-            <Link className="icon" to="/"><Unicons.UilLinkedin/></Link>
-            <Link className="link" to="/"><Unicons.UilGithub /></Link> 
+            <Link className="icon" to="/"><Unicons.UilLinkedin /></Link>
+            <Link className="link" to="/"><Unicons.UilGithub /></Link>
           </span>
         </div>
       </footer>
