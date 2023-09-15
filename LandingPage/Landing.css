@@ -154,6 +154,19 @@ h2{
   color: #36393e;
 }
 
+.overview{
+  padding: 25px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 8px;
+  width: 400px;
+  padding-top: 20px;
+}
+
 .search-bar input {
   flex: 1;
   border: none;
@@ -306,15 +319,7 @@ span {
 }
 
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 8px;
-  width: 400px;
-  padding-top: 20px;
-  
-}
+
 
 
 
