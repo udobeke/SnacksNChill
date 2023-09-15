@@ -10,12 +10,20 @@ export default function Landing() {
 
   useEffect(() => {
     // Fetch the top 10 movies from TMDB API when the component mounts
-    const apiKey = '2379ba0eff6a55ce45794c90a648db8b';
+    const apiKey = '2379ba0eff6a55ce45794c90a648db8b'
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=1`)
       .then((response) => response.json())
       .then((data) => setMovies(data.results.slice(0, 10)))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
+
+  // Function to get the background image URL from TMDb API
+  const getBackgroundImage = () => {
+    if (movies.length > 0) {
+      return `https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}`;
+    }
+    return ''; // Return a default or placeholder image URL if there are no movies
+  };
 
   const handleSearch = () => {
     if (searchQuery.trim() === '') {
@@ -61,15 +69,17 @@ export default function Landing() {
         </nav>
       </header>
 
-      <section className="homepage" id="home">
+      <section className="homepage" id="home" style={{ backgroundImage: `url(${getBackgroundImage()})` }}>
         <div className="content">
-          <div className="text">
-            <h1>John Wick 3 : Parabellum</h1>
-            <p>
-              John Wick is on the run after killing a member of the international assassins guild, <br /> and with a $14 million price tag on his head, he is the target of hit men and women everywhere
-            </p>
-          </div>
-          <Link to="/">Watch Trailer</Link>
+          {movies.length > 0 && (
+            <div className="text">
+              <h1>{movies[0].title}</h1>
+              <p>{movies[0].overview}</p>
+            </div>
+          )}
+          {movies.length > 0 && (
+            <Link to={`/movies/${movies[0].id}`}>Watch Trailer</Link>
+          )}
         </div>
       </section>
 
