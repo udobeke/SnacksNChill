@@ -74,7 +74,7 @@ export default function Landing() {
           {movies.length > 0 && (
             <div className="text">
               <h1>{movies[0].title}</h1>
-              <p>{movies[0].overview}</p>
+              <p className='overview'>{movies[0].overview}</p>
             </div>
           )}
           {movies.length > 0 && (
