@@ -46,10 +46,6 @@ export default function Landing() {
           <h2 className="logo">
             <Link to="/">SnacksNChill</Link>
           </h2>
-          <input type="checkbox" id="menu-toggler" />
-         
-          
-           
             <div className="search-bar">
               <input
                 type="text"
