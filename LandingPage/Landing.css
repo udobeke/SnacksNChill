@@ -182,6 +182,13 @@ h2{
   color: #fff;
 }
 
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
 
 section .cards .card {
   background: #fff;
@@ -308,4 +315,6 @@ span {
   padding-top: 20px;
   
 }
+
+
 
