@@ -13,6 +13,7 @@ html {
 
 body {
   background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+  width: 100%;
 }
 
 header {
@@ -258,6 +259,7 @@ footer div {
 
 footer span {
   color: #fff;
+  text-align: center;
 }
 
 footer a {
