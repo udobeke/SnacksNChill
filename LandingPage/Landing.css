@@ -126,8 +126,8 @@ footer a:hover {
   margin: 0 10px;
   padding: 10px 30px;
   border-radius: 5px;
-  background: #fff;
-  border: 2px solid #fff;
+  background: #A01239;
+  border: 2px solid #A01239;
   transition: 0.4s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   text-decoration: none;
@@ -167,12 +167,30 @@ section.about {
   max-width: 1200px;
 }
 
-.about .company-info {
-  margin-top: 30px;
-}
-
 h2{
   color: #fff;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
 }
 
 .description a{
@@ -181,18 +199,7 @@ h2{
   color: #fff;
 }
 
-.about h3 {
-  margin: 30px 0 10px;
-}
 
-.about .team {
-  text-align: left;
-  width: 100%;
-}
-
-.about .team ul {
-  padding-left: 20px;
-}
 
 section .cards .card {
   background: #fff;
@@ -209,13 +216,7 @@ section .cards .card {
   padding: 0 0 20px;
 }
 
-.services .card img {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
-  border-radius: 100%;
-  object-fit: cover;
-}
+
 
 .movie-list .card img {
   width: 100%;
@@ -237,17 +238,8 @@ section .cards .card {
 
 .font1{
   font-size: 20px;
-  color: #165D68;
+  color: #A01239;
 }
-
-
-
-
-
-
-
-
-
 
 footer {
   width: 100%;
@@ -273,17 +265,7 @@ footer a {
 }
 
 @media screen and (max-width: 860px) {
-  .navbar .all-links {
-    position: fixed;
-    left: -100%;
-    width: 300px;
-    display: block;
-    height: 100vh;
-    top: 75px;
-    background: #333;
-    transition: left 0.3s ease;
-  }
-
+ 
   .navbar #menu-toggler:checked~.all-links {
     left: 0;
   }
@@ -320,18 +302,6 @@ footer a {
     padding: 9px 20px;
   }
 
-  .contact .row {
-    flex-direction: column;
-  }
-
-  .contact .row .col {
-    width: 100%;
-  }
-
-  .contact .row .col:last-child {
-    margin-top: 40px;
-  }
-
   footer a {
     height: 0;
   }
@@ -345,7 +315,6 @@ footer a {
 }
 
 
-/* Styling for the search bar container */
 .search-bar {
   display: flex;
   align-items: center;
@@ -356,24 +325,3 @@ footer a {
   
 }
 
-.search-bar input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 8px;
-  
-}
-
-.search-bar button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 16px;
-  cursor: pointer;
-  margin-left: 8px;
-}
-
-.search-bar button:hover {
-  background-color: #0056b3;
-}
