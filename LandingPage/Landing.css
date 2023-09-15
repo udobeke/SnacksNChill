@@ -263,7 +263,7 @@ span {
 .social-icons .icon {
   font-size: 24px;
   margin: 0 10px;
-  color: #fff;
+  color: #A01239;
   text-decoration: none;
 }
 
@@ -308,6 +308,7 @@ span {
 
   footer a {
     height: 0;
+    color: #36393e;
   }
 }
 
