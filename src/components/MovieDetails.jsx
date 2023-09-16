@@ -51,7 +51,7 @@ function MovieDetails() {
   return (
     <>
       <div className='description'>
-        <h2 className="logo">
+        <h2 className="details">
           <Link to="/">SnacksNChill</Link>
         </h2>
       </div>
