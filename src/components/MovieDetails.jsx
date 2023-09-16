@@ -63,7 +63,7 @@ function MovieDetails() {
         />
         <div className='font'>
           <h2 data-testid="movie-title">{movie.title}</h2>
-          <p className='font1' data-testid="movie-release-date">Release Date: {movie.release_date}</p>
+          <p className='font1' data-testid="movie-release-date">{movie.release_date}</p>
           <p data-testid="movie-runtime">Runtime (minutes): {movie.runtime}</p>
           <p data-testid="movie-overview">{movie.overview}</p>
 
