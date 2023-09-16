@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Landing.css'
+import './Landing.css';
 import { Link } from 'react-router-dom';
 import * as Unicons from '@iconscout/react-unicons';
 
@@ -10,7 +10,7 @@ export default function Landing() {
 
   useEffect(() => {
     // Fetch the top 10 movies from TMDB API when the component mounts
-    const apiKey = '2379ba0eff6a55ce45794c90a648db8b'
+    const apiKey = '2379ba0eff6a55ce45794c90a648db8b';
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=1`)
       .then((response) => response.json())
       .then((data) => setMovies(data.results.slice(0, 10)))
@@ -65,7 +65,6 @@ export default function Landing() {
           </div>
 
           {isLoading && <div className="loading-indicator">Loading...</div>}
-
         </nav>
       </header>
 
@@ -74,7 +73,7 @@ export default function Landing() {
           {movies.length > 0 && (
             <div className="text">
               <h1>{movies[0].title}</h1>
-              <p className='overview'>{movies[0].overview}</p>
+              <p className="overview">{movies[0].overview}</p>
             </div>
           )}
           {movies.length > 0 && (
@@ -93,9 +92,10 @@ export default function Landing() {
                   src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
                   alt={movie.title}
                   className="movie-poster"
+                  data-testid="movie-poster"
                 />
-                <h3 className="movie-title">{movie.title}</h3>
-                <p className="movie-release-date">{movie.release_date}</p>
+                <h3 className="movie-title" data-testid="movie-title">{movie.title}</h3>
+                <p className="movie-release-date" data-testid="movie-release-date">{movie.release_date}</p>
               </Link>
             </li>
           ))}
@@ -112,5 +112,5 @@ export default function Landing() {
         </div>
       </footer>
     </>
-  )
+  );
 }
