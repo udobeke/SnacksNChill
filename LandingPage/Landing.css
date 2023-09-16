@@ -214,11 +214,13 @@ section .cards .card {
   text-align: center;
 }
 
+.details{
+  background-color: #A01239;
+}
+
 .movie-list .cards .card {
   padding: 0 0 20px;
 }
-
-
 
 .movie-list .card img {
   width: 100%;
